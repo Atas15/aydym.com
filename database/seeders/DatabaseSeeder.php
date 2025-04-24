@@ -2,22 +2,39 @@
 
 namespace Database\Seeders;
 
+use App\Models\Album;
+use App\Models\Artist;
+use App\Models\Song;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory()
+            ->count(10)
+            ->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        Artist::factory()
+            ->count(15)
+            ->create();
+
+        Album::factory()
+            ->count(50)
+            ->create();
+
+        $this->call([
+            GenreSeeder::class,
+        ]);
+
+        Song::factory()
+            ->count(1001)
+            ->create();
+
+        $this->call([
+            CollectionSeeder::class,
         ]);
     }
 }
