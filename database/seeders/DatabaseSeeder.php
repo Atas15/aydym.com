@@ -11,6 +11,7 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+
     public function run(): void
     {
         User::factory()
@@ -29,12 +30,14 @@ class DatabaseSeeder extends Seeder
             GenreSeeder::class,
         ]);
 
+        $this->call([
+            CollectionSeeder::class,
+        ]);
+
         Song::factory()
             ->count(1001)
             ->create();
 
-        $this->call([
-            CollectionSeeder::class,
-        ]);
+
     }
 }

@@ -14,8 +14,8 @@
     <table class="table table-striped table-hover table-sm">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
+            <th>Song ID</th>
+            <th>Song Name</th>
         </tr>
         </thead>
         <tbody>

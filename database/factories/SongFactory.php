@@ -17,14 +17,14 @@ class SongFactory extends Factory
         $artist = Artist::inRandomOrder()->first();
         $genre = Genre::inRandomOrder()->first();
         $album = Album::inRandomOrder()->first();
-        //$collection = Collection::inRandomOrder()->first();
+        $collection = Collection::inRandomOrder()->first();
 
         return [
             'name' => fake()->name(),
             'artist_id' => $artist->id,
             'genre_id' => $genre->id,
             'album_id' => $album->id,
-            //'collection_id' => $collection->id
+            'collection_id' => $collection->id
         ];
     }
 }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('artist_id')->index()->constrained()->cascadeOnDelete();
             $table->foreignId('genre_id')->index()->constrained()->cascadeOnDelete();
             $table->foreignId('album_id')->index()->constrained()->cascadeOnDelete();
+            $table->foreignId('collection_id')->index()->constrained()->cascadeOnDelete();
 
             $table->string('name');
         });
