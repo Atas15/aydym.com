@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+
 class Song extends Model
 {
+    protected $guarded = ['id'];
+
     public $timestamps = false;
 
     use HasFactory;
@@ -28,8 +31,8 @@ class Song extends Model
         return $this->belongsTo(Album::class);
     }
 
-    public function collections(): BelongsToMany
+    public function songs(): BelongsToMany
     {
-        return $this->belongsToMany(Collection::class);
+        return $this->belongsToMany(Song::class);
     }
 }

@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('genres.index') }}">Genres</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('collections.index') }}">Collections</a>
+                </li>
             </ul>
         </div>
     </div>

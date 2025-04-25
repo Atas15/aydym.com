@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('title')
-    Genres
+    Collections
 @endsection
 @section('content')
     <div class="h3 mb-3">
-        Genre
+        Collection
     </div>
 
     <div class="h3 mb-3">
-        {{$genre->name}}
+        {{$collection->name}}
     </div>
 
     <table class="table table-striped table-hover table-sm">

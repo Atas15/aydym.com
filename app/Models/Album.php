@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Album extends Model
 {
+    protected $guarded = ['id'];
+
     public $timestamps = false;
 
     use HasFactory;

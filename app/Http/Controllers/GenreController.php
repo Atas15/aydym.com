@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Album;
-use App\Models\Artist;
+
 use App\Models\Genre;
 use App\Models\Song;
 
@@ -28,6 +27,7 @@ class GenreController extends Controller
             ->get();
 
         return view('genre.show')->with([
+            'genre' => $genre,
             'songs' => $songs
         ]);
     }

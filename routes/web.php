@@ -21,13 +21,13 @@ Route::controller(\App\Http\Controllers\GenreController::class)
     ->name('genres.')
     ->group(function () {
         Route::get('{id}', 'show')->name('show');
-        Route::get('', 'index')->name('index');
+        Route::get('/', 'index')->name('index');
     });
 
-//Route::controller(\App\Http\Controllers\SongController::class)
-//    ->prefix('songs')
-//    ->name('songs.')
-//    ->group(function () {
-//        Route::get('{id}', 'show')->name('show');
-//        Route::get('/', 'index')->name('index');
-//    });
+Route::controller(\App\Http\Controllers\CollectionController::class)
+    ->prefix('collections')
+    ->name('collections.')
+    ->group(function () {
+        Route::get('{id}', 'show')->name('show');
+        Route::get('/', 'index')->name('index');
+    });

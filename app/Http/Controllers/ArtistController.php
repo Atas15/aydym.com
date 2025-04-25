@@ -14,7 +14,7 @@ class ArtistController extends Controller
         $artists = Artist::get();
 
         return view('artist.index')->with([
-            'artists' => $artists,
+            'artists' => $artists
         ]);
     }
 

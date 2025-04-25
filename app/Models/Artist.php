@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Artist extends Model
 {
+    protected $guarded = ['id'];
+
     public $timestamps = false;
 
     use HasFactory;

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Collection extends Model
 {
+    protected $guarded = ['id'];
+
     public $timestamps = false;
 
     public function songs(): BelongsToMany

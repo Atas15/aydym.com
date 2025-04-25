@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Genre extends Model
 {
+    protected $guarded = ['id'];
+
     public $timestamps = false;
 
     public function songs(): HasMany

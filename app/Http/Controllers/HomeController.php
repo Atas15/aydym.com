@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artist;
+use App\Models\Collection;
 use App\Models\Genre;
 
 class HomeController extends Controller
@@ -14,13 +15,14 @@ class HomeController extends Controller
 
         $genres = Genre::all();
 
-
+        $collections = Collection::all();
 
 
 
         return view('home.index')->with([
             'artists' => $artists,
-            'genres' => $genres
+            'genres' => $genres,
+            'collections' => $collections
         ]);
     }
 }
