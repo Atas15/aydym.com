@@ -16,6 +16,7 @@
         <tr>
             <th>Album ID</th>
             <th>Album Name</th>
+            <th>Songs</th>
         </tr>
         </thead>
         <tbody>
