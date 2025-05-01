@@ -25,7 +25,7 @@
                 <td>{{ $album->id }}</td>
                 <td>{{ $album->name }}</td>
                 <td>
-                    <a href="" class="btn btn-light btn-sm">
+                    <a href="{{ route('songs.show', ['id' => $album['id']]) }}" class="btn btn-light btn-sm">
                         {{$album->songs_count}}
                     </a>
                 </td>

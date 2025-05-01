@@ -31,3 +31,11 @@ Route::controller(\App\Http\Controllers\CollectionController::class)
         Route::get('{id}', 'show')->name('show');
         Route::get('/', 'index')->name('index');
     });
+
+Route::controller(\App\Http\Controllers\SongController::class)
+    ->prefix('songs')
+    ->name('songs.')
+    ->group(function () {
+        Route::get('{id}', 'show')->name('show');
+        //Route::get('/', 'index')->name('index');
+    });

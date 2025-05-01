@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->foreignId('artist_id')->index()->constrained()->cascadeOnDelete();
-
+            $table->string('image')->nullable();
             $table->string('name');
         });
     }

@@ -25,10 +25,13 @@ class ArtistController extends Controller
         $albums = Album::where('artist_id', $artist->id)
             ->withCount('songs')
             ->get();
+        $song = Song::find($id);
+
 
         return view('artist.show')->with([
             'artist' => $artist,
-            'albums' => $albums
+            'albums' => $albums,
+            'song' => $song
         ]);
     }
 }

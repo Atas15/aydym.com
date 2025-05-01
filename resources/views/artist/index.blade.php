@@ -8,6 +8,7 @@
     </div>
     <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3 mb-4">
         @foreach($artists as $artist)
+            <img src="">
             <div class="col">
                 <div class="card">
                     <div class="card-body">
